@@ -11,6 +11,8 @@ def compute_sorori_shinzaemon(number_of_days):
 	parameter
 	number_of_days : int (入力必須)
 		米をもらう予定日数
+	giving_rice_grains : int (計算用)
+		貰った米の値を計算するための変数
 	sum_of_rice_grains : int (計算用)
 		貰った米の累計値を計算するための変数
 	days_list : list (グラフ用)
@@ -21,6 +23,7 @@ def compute_sorori_shinzaemon(number_of_days):
 		グラフのy軸　入力された日付までに対して貰った累計の米粒のリスト
 	"""
 
+	giving_rice_grains = 0
 	sum_of_rice_grains = 0
 	days_list = []
 	day_of_rice_grains_list = []
@@ -49,7 +52,7 @@ def compute_sorori_shinzaemon(number_of_days):
 	plt.title('sum of rice grains')
 	plt.xlabel('day')
 	plt.ylabel('sum of rice')
-	plt.plot(days_list, sum_of_ric_grainse_list, color='blue')
+	plt.plot(days_list, sum_of_rice_grains_list, color='blue')
 	plt.show()
 
 	return giving_rice_grains, sum_of_rice_grains
@@ -58,6 +61,7 @@ def compute_sorori_shinzaemon(number_of_days):
 # 7月から10月までの総日数(受講期間)
 number_of_days_from_July_to_October = 123
 # 受講期間に対して貰える累計の米粒の算出及びグラフの表示
-number_of_rice_grains_from_July_to_October, sum_of_rice_grains_from_July_to_October = compute_sorori_shinzaemon(number_of_days_from_July_to_October)
+number_of_rice_grains_from_July_to_October, sum_of_rice_grains_from_July_to_October \
+	= compute_sorori_shinzaemon(number_of_days_from_July_to_October)
 # 受講期間に対して貰える累計の米粒の表示
 print(sum_of_rice_grains_from_July_to_October)
