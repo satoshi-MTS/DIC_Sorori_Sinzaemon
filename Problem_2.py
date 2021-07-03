@@ -42,7 +42,7 @@ def compute_sorori_shinzaemon(number_of_days):
 		sum_of_rice_grains_list.append(sum_of_rice_grains)
 
 	# その日に貰う米の数の推移
-	plt.title('day of rice')
+	plt.title('day of rice grains')
 	plt.xlabel('day')
 	plt.ylabel('number of rice')
 	plt.plot(days_list, day_of_rice_grains_list, color='red')
