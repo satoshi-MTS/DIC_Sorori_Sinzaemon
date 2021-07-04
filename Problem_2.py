@@ -5,12 +5,11 @@ import matplotlib.pyplot as plt
 # 関数の宣言
 def compute_sorori_shinzaemon(number_of_days):
 	"""
-	関数 : 曽呂利新左衛門の米の逸話における、日にちを入力すると貰える米粒の数を計算しグラフを表示する関数
-	返り値 : 入力された日付に対して貰った米の累計
+	function : 曽呂利新左衛門の米の逸話における、日にちを入力すると貰える米粒の数を計算しグラフを表示する関数
 
-	parameter
-	number_of_days : int (入力必須)
+	:param number_of_days : int
 		米をもらう予定日数
+
 	giving_rice_grains : int (計算用)
 		貰った米の値を計算するための変数
 	sum_of_rice_grains : int (計算用)
@@ -21,14 +20,20 @@ def compute_sorori_shinzaemon(number_of_days):
 		グラフのy軸　入力された日付に対して貰った米粒のリスト
 	sum_of_rice_grains_list : list (グラフ用)
 		グラフのy軸　入力された日付までに対して貰った累計の米粒のリスト
-	"""
 
+	:return giving_rice_grains : int
+		その日貰った米の数
+	:return sum_of_rice_grains : int
+		入力された日付に対して貰った米の累計
+	"""
+	# 初期値の設定
 	giving_rice_grains = 0
 	sum_of_rice_grains = 0
 	days_list = []
 	day_of_rice_grains_list = []
 	sum_of_rice_grains_list = []
 
+	# 計算
 	for day in range(1, number_of_days + 1):
 		# その日貰える米の数を計算
 		giving_rice_grains = 2 ** (day - 1)
@@ -55,6 +60,7 @@ def compute_sorori_shinzaemon(number_of_days):
 	plt.plot(days_list, sum_of_rice_grains_list, color='blue')
 	plt.show()
 
+	# 返り値の返却
 	return giving_rice_grains, sum_of_rice_grains
 
 
