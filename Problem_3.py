@@ -102,5 +102,5 @@ number_of_rice_grains_from_July_to_October, sum_of_rice_grains_from_July_to_Octo
 	= compute_sorori_shinzaemon(number_of_days_from_July_to_October)
 
 # 生活可能日数の表示
-print('成人男性{}人、成人女性{}人の場合米粒{}個で生活可能な日数は{}日です'.format(14, 1, sum_of_rice_grains_from_July_to_October,
+print('成人男性{}人、成人女性{}人の場合米粒{:e}個で生活可能な日数は{:e}日です'.format(14, 1, sum_of_rice_grains_from_July_to_October,
 		(rice_grain_survival_simulator(14, 1, sum_of_rice_grains_from_July_to_October))))
