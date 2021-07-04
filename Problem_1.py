@@ -1,7 +1,7 @@
 # モジュールのインポート
 import matplotlib.pyplot as plt
 
-# パラメータの設定
+# 初期値の設定
 DAYS = 100
 sum_of_rice_grains = 0
 days_list = []
