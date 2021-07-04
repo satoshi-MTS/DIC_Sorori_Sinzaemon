@@ -70,4 +70,4 @@ number_of_days_from_July_to_October = 123
 number_of_rice_grains_from_July_to_October, sum_of_rice_grains_from_July_to_October \
 	= compute_sorori_shinzaemon(number_of_days_from_July_to_October)
 # 受講期間に対して貰える累計の米粒の表示
-print(sum_of_rice_grains_from_July_to_October)
+print('受講期間で貰える米の総数は{}個です'.format(sum_of_rice_grains_from_July_to_October))
