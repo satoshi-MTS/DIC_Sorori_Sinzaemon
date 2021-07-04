@@ -22,15 +22,15 @@ for day in range(1, DAYS + 1):
 	sum_of_rice_grains_list.append(sum_of_rice_grains)
 
 # その日に貰う米の数の推移
-plt.title('day of rice')
+plt.title('day of rice grains')
 plt.xlabel('day')
-plt.ylabel('number of rice')
+plt.ylabel('number of rice grains')
 plt.plot(days_list, day_of_rice_grains_list, color='red')
 plt.show()
 
 # 累計で貰った米の数の推移
-plt.title('sum of rice')
+plt.title('sum of rice grains')
 plt.xlabel('day')
-plt.ylabel('sum of rice')
+plt.ylabel('sum of rice grains')
 plt.plot(days_list, sum_of_rice_grains_list, color='green')
 plt.show()
